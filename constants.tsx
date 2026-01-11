@@ -2,10 +2,11 @@
 import { Stall, DurianType } from './types';
 
 export const MOCK_STALLS: Stall[] = [
+  // --- MALAYSIA (Originals) ---
   {
     id: "1",
     name: "Durian King @ SS2",
-    address: "19, Jalan SS 2/67, SS 2, 47300 Petaling Jaya, Selangor",
+    address: "19, Jalan SS 2/67, SS 2, 47300 Petaling Jaya, Selangor, Malaysia",
     coordinates: { lat: 3.1189, lng: 101.6212 },
     phone: "012-3456789",
     whatsapp: "60123456789",
@@ -23,28 +24,9 @@ export const MOCK_STALLS: Stall[] = [
     }
   },
   {
-    id: "2",
-    name: "Donald's Durian",
-    address: "15, Jalan 19/29, Seksyen 19, 46300 Petaling Jaya, Selangor",
-    coordinates: { lat: 3.1192, lng: 101.6298 },
-    phone: "017-2345678",
-    whatsapp: "60172345678",
-    operatingHours: "1:00 PM - 11:00 PM",
-    photos: ["https://picsum.photos/seed/durian2/400/300"],
-    varieties: [
-      { name: DurianType.MUSANG_KING, pricePerKg: 68, availability: true, lastUpdated: "2024-05-21" },
-      { name: DurianType.XO, pricePerKg: 35, availability: true, lastUpdated: "2024-05-21" }
-    ],
-    ratings: {
-      overall: 4.5,
-      totalReviews: 890,
-      categories: { quality: 4.6, price: 4.0, service: 4.4 }
-    }
-  },
-  {
     id: "3",
     name: "Rizky Durian Raub",
-    address: "Pusat Bandar Raub, 27600 Raub, Pahang",
+    address: "Pusat Bandar Raub, 27600 Raub, Pahang, Malaysia",
     coordinates: { lat: 3.7915, lng: 101.8569 },
     phone: "019-9876543",
     whatsapp: "60199876543",
@@ -60,23 +42,88 @@ export const MOCK_STALLS: Stall[] = [
       categories: { quality: 5.0, price: 4.8, service: 4.5 }
     }
   },
+
+  // --- THAILAND (Global Exporters) ---
   {
-    id: "4",
-    name: "Durian SS2",
-    address: "Jalan SS 2/24, SS 2, 47300 Petaling Jaya, Selangor",
-    coordinates: { lat: 3.1172, lng: 101.6234 },
-    phone: "012-6668888",
-    whatsapp: "60126668888",
-    operatingHours: "11:00 AM - 11:00 PM",
-    photos: ["https://picsum.photos/seed/durian4/400/300"],
+    id: "global-1",
+    name: "Queen Durian Export Co.",
+    address: "Chanthaburi City, Chanthaburi, Thailand",
+    coordinates: { lat: 12.6112, lng: 102.1039 },
+    phone: "+66 39 123 456",
+    whatsapp: "6639123456",
+    operatingHours: "8:00 AM - 6:00 PM",
+    photos: ["https://picsum.photos/seed/thai-durian/400/300"],
     varieties: [
-      { name: DurianType.MUSANG_KING, pricePerKg: 62, availability: true, lastUpdated: "2024-05-23" },
-      { name: DurianType.RED_PRAWN, pricePerKg: 42, availability: true, lastUpdated: "2024-05-23" }
+      { name: "Monthong", pricePerKg: 12, availability: true, lastUpdated: "2024-05-25" },
+      { name: "Chanee", pricePerKg: 10, availability: true, lastUpdated: "2024-05-25" }
     ],
     ratings: {
-      overall: 4.2,
-      totalReviews: 2100,
-      categories: { quality: 4.3, price: 3.9, service: 4.1 }
+      overall: 4.7,
+      totalReviews: 3200,
+      categories: { quality: 4.8, price: 4.9, service: 4.4 }
+    }
+  },
+
+  // --- VIETNAM ---
+  {
+    id: "global-2",
+    name: "Dak Lak Durian Hub",
+    address: "Buon Ma Thuot, Dak Lak, Vietnam",
+    coordinates: { lat: 12.6678, lng: 108.0383 },
+    phone: "+84 262 345 678",
+    whatsapp: "84262345678",
+    operatingHours: "7:00 AM - 7:00 PM",
+    photos: ["https://picsum.photos/seed/viet-durian/400/300"],
+    varieties: [
+      { name: "Ri6 Durian", pricePerKg: 15, availability: true, lastUpdated: "2024-05-25" },
+      { name: "Musang King (VN)", pricePerKg: 45, availability: true, lastUpdated: "2024-05-25" }
+    ],
+    ratings: {
+      overall: 4.6,
+      totalReviews: 1800,
+      categories: { quality: 4.7, price: 4.8, service: 4.5 }
+    }
+  },
+
+  // --- PHILIPPINES ---
+  {
+    id: "global-3",
+    name: "Davao Durian Industry Association",
+    address: "Davao City, Davao del Sur, Philippines",
+    coordinates: { lat: 7.1907, lng: 125.4553 },
+    phone: "+63 82 234 5678",
+    whatsapp: "63822345678",
+    operatingHours: "9:00 AM - 9:00 PM",
+    photos: ["https://picsum.photos/seed/ph-durian/400/300"],
+    varieties: [
+      { name: "Puyat Durian", pricePerKg: 8, availability: true, lastUpdated: "2024-05-25" },
+      { name: "Arancillo", pricePerKg: 9, availability: true, lastUpdated: "2024-05-25" }
+    ],
+    ratings: {
+      overall: 4.5,
+      totalReviews: 2400,
+      categories: { quality: 4.6, price: 4.7, service: 4.3 }
+    }
+  },
+
+  // --- INDONESIA ---
+  {
+    id: "global-4",
+    name: "Medan Exotic Fruit Center",
+    address: "Medan, North Sumatra, Indonesia",
+    coordinates: { lat: 3.5952, lng: 98.6722 },
+    phone: "+62 61 3456 7890",
+    whatsapp: "626134567890",
+    operatingHours: "10:00 AM - 11:00 PM",
+    photos: ["https://picsum.photos/seed/indo-durian/400/300"],
+    varieties: [
+      { name: "Durian Medan", pricePerKg: 7, availability: true, lastUpdated: "2024-05-25" },
+      { name: "Bawor", pricePerKg: 14, availability: true, lastUpdated: "2024-05-25" }
+    ],
+    ratings: {
+      overall: 4.4,
+      totalReviews: 3100,
+      categories: { quality: 4.5, price: 4.8, service: 4.2 }
     }
   }
 ];

@@ -50,3 +50,27 @@ export enum DurianType {
   XO = "XO",
   KAMPUNG = "Kampung"
 }
+
+// Globe specific types
+export interface GlobeDestination {
+  id: string;
+  name: string;
+  country: string;
+  coordinates: [number, number]; 
+  poeticTitle: string;
+  description: string;
+  image: string;
+  visitedAt: string;
+}
+
+export interface WeatherData {
+  temp: number;
+  condition: string;
+  humidity: number;
+  windSpeed: number;
+}
+
+export interface FlightInfo {
+  price: string;
+  link: string;
+}
