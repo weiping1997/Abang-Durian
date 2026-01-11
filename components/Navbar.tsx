@@ -1,0 +1,46 @@
+
+import React from 'react';
+
+interface NavbarProps {
+  onNav: (view: 'explore' | 'compare' | 'agent' | 'admin') => void;
+  activeView: string;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ onNav, activeView }) => {
+  return (
+    <nav className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-16 items-center">
+          <div className="flex items-center cursor-pointer" onClick={() => onNav('explore')}>
+            <div className="w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center text-white mr-3 font-bold text-xl">
+              D
+            </div>
+            <h1 className="text-xl font-bold text-gray-900 hidden sm:block">Abang Durian <span className="text-green-600">MY</span></h1>
+          </div>
+          <div className="flex space-x-4">
+            <button 
+              onClick={() => onNav('explore')}
+              className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${activeView === 'explore' ? 'text-green-600 bg-green-50' : 'text-gray-500 hover:text-green-600 hover:bg-green-50'}`}
+            >
+              Explore
+            </button>
+            <button 
+              onClick={() => onNav('compare')}
+              className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${activeView === 'compare' ? 'text-green-600 bg-green-50' : 'text-gray-500 hover:text-green-600 hover:bg-green-50'}`}
+            >
+              Compare
+            </button>
+            <button 
+              onClick={() => onNav('agent')}
+              className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${activeView === 'agent' ? 'text-green-600 bg-green-50' : 'text-gray-500 hover:text-green-600 hover:bg-green-50'}`}
+            >
+              Abang AI
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;

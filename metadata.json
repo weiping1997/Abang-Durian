@@ -1,0 +1,7 @@
+{
+  "name": "Abang Durian Malaysia",
+  "description": "A comprehensive platform for finding durian stalls in Malaysia, comparing real-time prices (Musang King, Black Thorn, etc.), and reading verified reviews with AI-powered data extraction.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
