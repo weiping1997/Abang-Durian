@@ -33,6 +33,7 @@ export interface Stall {
   ratings: StallRatings;
   photos: string[];
   distance?: number;
+  isLiveSource?: boolean;
 }
 
 export interface ChatMessage {
@@ -61,6 +62,7 @@ export interface GlobeDestination {
   description: string;
   image: string;
   visitedAt: string;
+  priceLabel?: string; 
 }
 
 export interface WeatherData {

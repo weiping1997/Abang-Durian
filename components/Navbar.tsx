@@ -1,8 +1,9 @@
 
 import React from 'react';
+import { Box } from 'lucide-react';
 
 interface NavbarProps {
-  onNav: (view: 'explore' | 'compare' | 'agent' | 'admin') => void;
+  onNav: (view: 'explore' | 'vr' | 'agent' | 'admin') => void;
   activeView: string;
 }
 
@@ -13,11 +14,11 @@ const Navbar: React.FC<NavbarProps> = ({ onNav, activeView }) => {
         <div className="flex justify-between h-16 items-center">
           <div className="flex items-center cursor-pointer" onClick={() => onNav('explore')}>
             <div className="w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center text-white mr-3 font-bold text-xl">
-              D
+              M
             </div>
-            <h1 className="text-xl font-bold text-gray-900 hidden sm:block">Abang Durian <span className="text-green-600">MY</span></h1>
+            <h1 className="text-xl font-bold text-gray-900 hidden sm:block"><span className="text-green-600">MY</span> Abang Durian</h1>
           </div>
-          <div className="flex space-x-4">
+          <div className="flex space-x-2 sm:space-x-4">
             <button 
               onClick={() => onNav('explore')}
               className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${activeView === 'explore' ? 'text-green-600 bg-green-50' : 'text-gray-500 hover:text-green-600 hover:bg-green-50'}`}
@@ -25,10 +26,11 @@ const Navbar: React.FC<NavbarProps> = ({ onNav, activeView }) => {
               Explore
             </button>
             <button 
-              onClick={() => onNav('compare')}
-              className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${activeView === 'compare' ? 'text-green-600 bg-green-50' : 'text-gray-500 hover:text-green-600 hover:bg-green-50'}`}
+              onClick={() => onNav('vr')}
+              className={`px-3 py-2 rounded-md text-sm font-medium transition-all flex items-center gap-2 ${activeView === 'vr' ? 'text-red-600 bg-red-50 ring-1 ring-red-100' : 'text-gray-500 hover:text-red-600 hover:bg-red-50'}`}
             >
-              Compare
+              <Box className={`w-4 h-4 ${activeView === 'vr' ? 'animate-bounce' : ''}`} />
+              VR View
             </button>
             <button 
               onClick={() => onNav('agent')}
